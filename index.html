@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Sunny | Cybersecurity Portfolio</title>
+  <style>
+    :root {
+      --bg: #181a20;
+      --card: #22242c;
+      --card-alt: #24262e;
+      --primary: #00ffc6;
+      --primary-fade: #00ffc666;
+      --text: #f2f2f7;
+      --subtext: #b0b2bb;
+      --accent: #7a70ff;
+      --btn-bg: #23264f;
+      --btn-hover: #17184a;
+      --border: #333646;
+      --radius: 14px;
+      --spacing: 1.5rem;
+      --font: 'Segoe UI', 'Roboto', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      margin: 0;
+      min-height: 100vh;
+      letter-spacing: 0.01em;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1rem 2rem;
+      background: linear-gradient(180deg, #1e2130 90%, transparent 100%);
+    }
+
+    .hero-title {
+      font-size: 2.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--primary);
+      margin: 0 0 0.4rem;
+    }
+
+    .hero-sub {
+      font-size: 1.25rem;
+      color: var(--subtext);
+      margin-bottom: 1.2rem;
+      text-shadow: 0 1px 8px #0007;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .hero-btns a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      background: var(--btn-bg);
+      color: var(--primary);
+      padding: 0.7em 1.6em;
+      font-size: 1.08rem;
+      font-weight: 500;
+      border-radius: var(--radius);
+      border: 1.5px solid var(--primary);
+      text-decoration: none;
+      transition: background .18s, color .18s, border-color .18s;
+      box-shadow: 0 3px 24px 0 var(--primary-fade);
+    }
+    .hero-btns a:hover {
+      background: var(--btn-hover);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    main {
+      width: 100%;
+      max-width: 890px;
+      margin: 0 auto;
+      padding: 0 1.5rem 2rem;
+      box-sizing: border-box;
+    }
+
+    section {
+      margin-bottom: 2.7rem;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 18px 0 #0002;
+      padding: 2rem 2rem 1.3rem;
+    }
+
+    .section-title {
+      color: var(--primary);
+      font-size: 1.45rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.03em;
+    }
+
+    .about-text {
+      color: var(--subtext);
+      line-height: 1.7;
+      font-size: 1.07rem;
+      margin: 0;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.1rem;
+    }
+
+    .project-card {
+      background: var(--card-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.3rem 1.1rem;
+      box-shadow: 0 2px 14px 0 #0003;
+      transition: transform .13s, box-shadow .13s;
+      cursor: pointer;
+      position: relative;
+    }
+    .project-card:hover {
+      transform: translateY(-4px) scale(1.025);
+      box-shadow: 0 8px 32px 0 var(--primary-fade);
+      border-color: var(--primary);
+    }
+    .project-title {
+      font-size: 1.09rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin: 0 0 0.3rem 0;
+    }
+    .project-desc {
+      font-size: 0.99rem;
+      color: var(--text);
+      margin: 0;
+      opacity: 0.83;
+    }
+    @media (max-width: 600px) {
+      header { padding: 2rem 0.5rem 1.2rem; }
+      section { padding: 1.2rem 0.7rem 0.7rem; }
+      .section-title { font-size: 1.18rem; }
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; background-color: #191a23;}
+    ::-webkit-scrollbar-thumb { background: #424559; border-radius: 5px;}
+    ::selection { background: var(--primary-fade); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero-title">Sunny</div>
+    <div class="hero-sub">Cybersecurity Student • Aspiring Web VAPT Specialist</div>
+    <div class="hero-btns">
+      <a href="https://github.com/" target="_blank" rel="noopener">
+        <svg height="19" width="19" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.09-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.55 7.55 0 0 1 2.01-.27c.68 0 1.37.09 2.01.27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.17 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C3.33 3.5 2 4.83 2 6.5s1.33 3 2.98 3 2.98-1.33 2.98-3-1.33-3-2.98-3zM3 8.98H7V21H3zM9.489 8.98h3.42v1.646h.049c.478-.905 1.646-1.853 3.387-1.853 3.682 0 4.356 2.422 4.356 5.573V21H16V14.74c0-1.49-.03-3.407-2.084-3.407-2.084 0-2.403 1.623-2.403 3.295V21h-4V8.98z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </header>
+  <main>
+    <section id="about">
+      <div class="section-title">About Me</div>
+      <p class="about-text">
+        Hey! I’m Sunny, a cybersecurity student, delving deeply into the world of Web Application Vulnerability Assessment and Penetration Testing (VAPT). Passionate about discovering security flaws and making the web a safer place, I blend both red teaming curiosity and blue teaming diligence. Currently hacking away at web labs, learning deeply, and gearing toward professional Web VAPT roles. Always eager to collaborate, learn, and connect!
+      </p>
+    </section>
+    <section id="projects">
+      <div class="section-title">Projects &amp; Labs</div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-title">OWASP Juice Shop Walkthrough</div>
+          <div class="project-desc">Hands-on exploration of OWASP Juice Shop vulnerabilities, documenting exploitation and remediation.</div>
+        </div>
+        <div class="project-card">
+          <div class="project-title">DVWA Challenges</div>
+          <div class="project-desc">Exploited key modules in Damn Vulnerable Web App: XSS, SQLi, CSRF and more, with full writeups.</div>
+        </div>
+        <div class="project-card">
+          <div class="project-title">Custom Bug Bounty Labs</div>
+          <div class="project-desc">Built custom vulnerable apps to simulate real-world bug bounty scenarios, practicing discovery to reporting.</div>
+        </div>
+        <div class="project-card">
+          <div class="project-title">Recon Automation Scripts</div>
+          <div class="project-desc">Developed Python and Bash tools to automate subdomain enumeration, endpoint fuzzing, and more.</div>
+        </div>
+        <div class="project-card">
+          <div class="project-title">CTF Writeups</div>
+          <div class="project-desc">Documented solutions and methodologies for selected Web CTF challenges and hackathons.</div>
+        </div>
+        <div class="project-card">
+          <div class="project-title">Learning Path Blog</div>
+          <div class="project-desc">Maintaining a blog that tracks my Web VAPT learning, labs progress, and security reflections.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
