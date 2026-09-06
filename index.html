@@ -2,211 +2,326 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Sunny | Cybersecurity Portfolio</title>
-  <style>
-    :root {
-      --bg: #181a20;
-      --card: #22242c;
-      --card-alt: #24262e;
-      --primary: #00ffc6;
-      --primary-fade: #00ffc666;
-      --text: #f2f2f7;
-      --subtext: #b0b2bb;
-      --accent: #7a70ff;
-      --btn-bg: #23264f;
-      --btn-hover: #17184a;
-      --border: #333646;
-      --radius: 14px;
-      --spacing: 1.5rem;
-      --font: 'Segoe UI', 'Roboto', sans-serif;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sunny — Cybersecurity student, Web VAPT specialist, and social impact technologist.">
+  <title>Sunny — Portfolio</title>
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--font);
-      margin: 0;
-      min-height: 100vh;
-      letter-spacing: 0.01em;
-    }
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 3rem 1rem 2rem;
-      background: linear-gradient(180deg, #1e2130 90%, transparent 100%);
-    }
-
-    .hero-title {
-      font-size: 2.7rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: var(--primary);
-      margin: 0 0 0.4rem;
-    }
-
-    .hero-sub {
-      font-size: 1.25rem;
-      color: var(--subtext);
-      margin-bottom: 1.2rem;
-      text-shadow: 0 1px 8px #0007;
-    }
-
-    .hero-btns {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .hero-btns a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5em;
-      background: var(--btn-bg);
-      color: var(--primary);
-      padding: 0.7em 1.6em;
-      font-size: 1.08rem;
-      font-weight: 500;
-      border-radius: var(--radius);
-      border: 1.5px solid var(--primary);
-      text-decoration: none;
-      transition: background .18s, color .18s, border-color .18s;
-      box-shadow: 0 3px 24px 0 var(--primary-fade);
-    }
-    .hero-btns a:hover {
-      background: var(--btn-hover);
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-
-    main {
-      width: 100%;
-      max-width: 890px;
-      margin: 0 auto;
-      padding: 0 1.5rem 2rem;
-      box-sizing: border-box;
-    }
-
-    section {
-      margin-bottom: 2.7rem;
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: 0 2px 18px 0 #0002;
-      padding: 2rem 2rem 1.3rem;
-    }
-
-    .section-title {
-      color: var(--primary);
-      font-size: 1.45rem;
-      margin-bottom: 1rem;
-      letter-spacing: 0.03em;
-    }
-
-    .about-text {
-      color: var(--subtext);
-      line-height: 1.7;
-      font-size: 1.07rem;
-      margin: 0;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.1rem;
-    }
-
-    .project-card {
-      background: var(--card-alt);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.3rem 1.1rem;
-      box-shadow: 0 2px 14px 0 #0003;
-      transition: transform .13s, box-shadow .13s;
-      cursor: pointer;
-      position: relative;
-    }
-    .project-card:hover {
-      transform: translateY(-4px) scale(1.025);
-      box-shadow: 0 8px 32px 0 var(--primary-fade);
-      border-color: var(--primary);
-    }
-    .project-title {
-      font-size: 1.09rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin: 0 0 0.3rem 0;
-    }
-    .project-desc {
-      font-size: 0.99rem;
-      color: var(--text);
-      margin: 0;
-      opacity: 0.83;
-    }
-    @media (max-width: 600px) {
-      header { padding: 2rem 0.5rem 1.2rem; }
-      section { padding: 1.2rem 0.7rem 0.7rem; }
-      .section-title { font-size: 1.18rem; }
-    }
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar { width: 8px; background-color: #191a23;}
-    ::-webkit-scrollbar-thumb { background: #424559; border-radius: 5px;}
-    ::selection { background: var(--primary-fade); }
-  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="hero-title">Sunny</div>
-    <div class="hero-sub">Cybersecurity Student • Aspiring Web VAPT Specialist</div>
-    <div class="hero-btns">
-      <a href="https://github.com/" target="_blank" rel="noopener">
-        <svg height="19" width="19" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.09-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.55 7.55 0 0 1 2.01-.27c.68 0 1.37.09 2.01.27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.17 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-        GitHub
+
+  <!-- Custom Cursor -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
+  <!-- ============================================
+       NAVIGATION
+       Extend with additional <a> links or nested
+       subpages (e.g. /about.html) as needed.
+       ============================================ -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="/" class="nav__logo" data-cursor="hover">
+        Sunny<span class="nav__logo-dot">.</span>
       </a>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C3.33 3.5 2 4.83 2 6.5s1.33 3 2.98 3 2.98-1.33 2.98-3-1.33-3-2.98-3zM3 8.98H7V21H3zM9.489 8.98h3.42v1.646h.049c.478-.905 1.646-1.853 3.387-1.853 3.682 0 4.356 2.422 4.356 5.573V21H16V14.74c0-1.49-.03-3.407-2.084-3.407-2.084 0-2.403 1.623-2.403 3.295V21h-4V8.98z"/></svg>
-        LinkedIn
-      </a>
-    </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about" class="nav__link" data-cursor="hover">About</a></li>
+        <li><a href="#projects" class="nav__link" data-cursor="hover">Projects</a></li>
+        <li><a href="#contact" class="nav__link" data-cursor="hover">Contact</a></li>
+      </ul>
+    </nav>
   </header>
+
   <main>
-    <section id="about">
-      <div class="section-title">About Me</div>
-      <p class="about-text">
-        Hey! I’m Sunny, a cybersecurity student, delving deeply into the world of Web Application Vulnerability Assessment and Penetration Testing (VAPT). Passionate about discovering security flaws and making the web a safer place, I blend both red teaming curiosity and blue teaming diligence. Currently hacking away at web labs, learning deeply, and gearing toward professional Web VAPT roles. Always eager to collaborate, learn, and connect!
-      </p>
+
+    <!-- ============================================
+         HERO
+         ============================================ -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="container hero__inner">
+        <p class="hero__label reveal" data-reveal>Available for opportunities</p>
+        <h1 class="hero__title reveal" data-reveal>
+          Building safer<br>
+          <span class="hero__title-accent">digital worlds.</span>
+        </h1>
+        <p class="hero__bio reveal" data-reveal>
+          I'm Sunny — a cybersecurity student and aspiring Web VAPT specialist
+          passionate about uncovering vulnerabilities, securing the web, and
+          using technology for social impact.
+        </p>
+        <div class="hero__actions reveal" data-reveal>
+          <a href="#projects" class="btn btn--primary" data-cursor="hover">
+            View Projects
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn--ghost" data-cursor="hover">Get in Touch</a>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to about section" data-cursor="hover">
+        <span class="scroll-indicator__text">Scroll</span>
+        <span class="scroll-indicator__line"></span>
+      </a>
     </section>
-    <section id="projects">
-      <div class="section-title">Projects &amp; Labs</div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-title">OWASP Juice Shop Walkthrough</div>
-          <div class="project-desc">Hands-on exploration of OWASP Juice Shop vulnerabilities, documenting exploitation and remediation.</div>
+
+    <!-- ============================================
+         ABOUT
+         Future: extract to about.html and link
+         from nav when expanding to multi-page.
+         ============================================ -->
+    <section class="about section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section__header reveal" data-reveal>
+          <span class="section__label">01 — About</span>
+          <h2 class="section__title" id="about-heading">Who I am</h2>
         </div>
-        <div class="project-card">
-          <div class="project-title">DVWA Challenges</div>
-          <div class="project-desc">Exploited key modules in Damn Vulnerable Web App: XSS, SQLi, CSRF and more, with full writeups.</div>
-        </div>
-        <div class="project-card">
-          <div class="project-title">Custom Bug Bounty Labs</div>
-          <div class="project-desc">Built custom vulnerable apps to simulate real-world bug bounty scenarios, practicing discovery to reporting.</div>
-        </div>
-        <div class="project-card">
-          <div class="project-title">Recon Automation Scripts</div>
-          <div class="project-desc">Developed Python and Bash tools to automate subdomain enumeration, endpoint fuzzing, and more.</div>
-        </div>
-        <div class="project-card">
-          <div class="project-title">CTF Writeups</div>
-          <div class="project-desc">Documented solutions and methodologies for selected Web CTF challenges and hackathons.</div>
-        </div>
-        <div class="project-card">
-          <div class="project-title">Learning Path Blog</div>
-          <div class="project-desc">Maintaining a blog that tracks my Web VAPT learning, labs progress, and security reflections.</div>
+
+        <div class="about__grid">
+          <div class="about__intro reveal" data-reveal>
+            <p class="about__lead">
+              Hey — I'm Sunny. I live at the intersection of offensive security
+              curiosity and defensive diligence, with a growing focus on
+              Web Application Vulnerability Assessment &amp; Penetration Testing.
+            </p>
+            <p class="about__text">
+              From breaking down OWASP Juice Shop to building recon automation
+              scripts, I approach every challenge with methodical rigor and
+              genuine curiosity. I believe security work should be accessible,
+              ethical, and ultimately in service of people — not just systems.
+            </p>
+          </div>
+
+          <div class="about__details">
+            <div class="about__block reveal" data-reveal>
+              <h3 class="about__block-title">Core Skills</h3>
+              <ul class="tag-list">
+                <li class="tag">Web VAPT</li>
+                <li class="tag">OWASP Top 10</li>
+                <li class="tag">Burp Suite</li>
+                <li class="tag">Python / Bash</li>
+                <li class="tag">Recon &amp; OSINT</li>
+                <li class="tag">Bug Bounty</li>
+              </ul>
+            </div>
+
+            <div class="about__block reveal" data-reveal>
+              <h3 class="about__block-title">Philosophy</h3>
+              <p class="about__text">
+                Break things responsibly. Document everything. Share knowledge
+                freely. The best security professionals don't gatekeep — they
+                elevate the entire community.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- ============================================
+         PROJECTS
+         Future: individual project pages at
+         /projects/[slug].html
+         ============================================ -->
+    <section class="projects section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section__header reveal" data-reveal>
+          <span class="section__label">02 — Work</span>
+          <h2 class="section__title" id="projects-heading">Social &amp; Tech Projects</h2>
+        </div>
+
+        <div class="projects__list">
+
+          <article class="project-card reveal" data-reveal data-cursor="hover">
+            <div class="project-card__content">
+              <span class="project-card__index">01</span>
+              <h3 class="project-card__title">OWASP Juice Shop Walkthrough</h3>
+              <p class="project-card__desc">
+                Comprehensive hands-on exploration of OWASP Juice Shop
+                vulnerabilities — documenting exploitation techniques and
+                remediation strategies.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag tag--sm">Security Research</span>
+                <span class="tag tag--sm">OWASP</span>
+                <span class="tag tag--sm">Writeup</span>
+              </div>
+            </div>
+            <a href="#" class="project-card__link" aria-label="View OWASP Juice Shop Walkthrough" data-cursor="hover">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal" data-reveal data-cursor="hover">
+            <div class="project-card__content">
+              <span class="project-card__index">02</span>
+              <h3 class="project-card__title">DVWA Challenge Series</h3>
+              <p class="project-card__desc">
+                Exploited key modules in Damn Vulnerable Web App — XSS, SQLi,
+                CSRF and more — with full technical writeups and lessons learned.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag tag--sm">Pen Testing</span>
+                <span class="tag tag--sm">XSS</span>
+                <span class="tag tag--sm">SQLi</span>
+              </div>
+            </div>
+            <a href="#" class="project-card__link" aria-label="View DVWA Challenge Series" data-cursor="hover">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal" data-reveal data-cursor="hover">
+            <div class="project-card__content">
+              <span class="project-card__index">03</span>
+              <h3 class="project-card__title">Custom Bug Bounty Labs</h3>
+              <p class="project-card__desc">
+                Built custom vulnerable applications to simulate real-world bug
+                bounty scenarios — from discovery to responsible disclosure.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag tag--sm">Bug Bounty</span>
+                <span class="tag tag--sm">App Security</span>
+                <span class="tag tag--sm">Social Impact</span>
+              </div>
+            </div>
+            <a href="#" class="project-card__link" aria-label="View Custom Bug Bounty Labs" data-cursor="hover">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal" data-reveal data-cursor="hover">
+            <div class="project-card__content">
+              <span class="project-card__index">04</span>
+              <h3 class="project-card__title">Recon Automation Toolkit</h3>
+              <p class="project-card__desc">
+                Python and Bash tooling for subdomain enumeration, endpoint
+                fuzzing, and automated reconnaissance workflows.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag tag--sm">Python</span>
+                <span class="tag tag--sm">Automation</span>
+                <span class="tag tag--sm">Open Source</span>
+              </div>
+            </div>
+            <a href="#" class="project-card__link" aria-label="View Recon Automation Toolkit" data-cursor="hover">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal" data-reveal data-cursor="hover">
+            <div class="project-card__content">
+              <span class="project-card__index">05</span>
+              <h3 class="project-card__title">CTF Writeups &amp; Community</h3>
+              <p class="project-card__desc">
+                Documented solutions and methodologies for Web CTF challenges,
+                contributing to the broader security learning community.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag tag--sm">CTF</span>
+                <span class="tag tag--sm">Education</span>
+                <span class="tag tag--sm">Community</span>
+              </div>
+            </div>
+            <a href="#" class="project-card__link" aria-label="View CTF Writeups" data-cursor="hover">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal" data-reveal data-cursor="hover">
+            <div class="project-card__content">
+              <span class="project-card__index">06</span>
+              <h3 class="project-card__title">Security Learning Blog</h3>
+              <p class="project-card__desc">
+                An ongoing blog tracking my Web VAPT journey — labs progress,
+                reflections, and resources for aspiring security professionals.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag tag--sm">Blog</span>
+                <span class="tag tag--sm">Knowledge Sharing</span>
+                <span class="tag tag--sm">Mentorship</span>
+              </div>
+            </div>
+            <a href="#" class="project-card__link" aria-label="View Security Learning Blog" data-cursor="hover">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT / FOOTER
+         ============================================ -->
+    <footer class="footer section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="footer__cta reveal" data-reveal>
+          <span class="section__label">03 — Contact</span>
+          <h2 class="footer__title" id="contact-heading">
+            Let's build something<br>
+            <span class="hero__title-accent">secure together.</span>
+          </h2>
+          <a href="mailto:hello@sunny.dev" class="btn btn--primary btn--large" data-cursor="hover">
+            hello@sunny.dev
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer__bottom reveal" data-reveal>
+          <ul class="footer__social">
+            <li>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="footer__social-link" data-cursor="hover">
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="footer__social-link" data-cursor="hover">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="footer__social-link" data-cursor="hover">
+                Twitter
+              </a>
+            </li>
+          </ul>
+          <p class="footer__copy">&copy; 2026 Sunny. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
